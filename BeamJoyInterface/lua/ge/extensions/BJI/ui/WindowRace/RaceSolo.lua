@@ -143,10 +143,10 @@ local function drawSprint(ctxt)
             big = true,
         })
         :build()
-    local maxCheckpoints = 3  -- Nombre maximum de checkpoints à afficher
-    local totalCheckpoints = #lb.waypoints  -- Nombre total de checkpoints passés
+    local maxCheckpoints = 3
+    local totalCheckpoints = #lb.waypoints
 
-    local startIndex = math.max(1, totalCheckpoints - maxCheckpoints + 1)  -- Détermine où commencer
+    local startIndex = math.max(1, totalCheckpoints - maxCheckpoints + 1)
 
     local cols = ColumnsBuilder("BJIRaceSoloSprintLeaderboard", { labelWidth, -1 })
     for iWp = startIndex, totalCheckpoints do
